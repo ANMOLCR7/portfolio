@@ -24,28 +24,5 @@ scrollTopBtn.addEventListener('click', () => {
   scrollTopBtn.blur();
 });
 
-// Contact form validation and feedback
-const contactForm = document.querySelector('#contact form');
-if (contactForm) {
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const name = this.name.value.trim();
-    const email = this.email.value.trim();
-    const message = this.message.value.trim();
+// Contact form validation/redirect removed as per request
 
-    // Simple validation
-    if (!name || !email || !message) {
-      alert('Please fill in all fields.');
-      return;
-    }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      alert('Please enter a valid email address.');
-      this.email.focus();
-      return;
-    }
-
-    // Simulate successful submission
-    alert('Thank you for reaching out, ' + name + '!');
-    contactForm.reset();
-  });
-}
